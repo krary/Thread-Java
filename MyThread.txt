@@ -1,0 +1,59 @@
+Creando Thread en java 
+ 
+Pasos a Seguir 
+
+
+1)   Creamso una clase fuera de todas las clases que implemente la clase Thread
+
+
+
+2)   Dentro de nuestro constructor de nuestra clase Thread implementamos todo aquelloq que necesitamos
+en nuestra clase es decir si queremos que al apretar un boton salga por ejemplo un mensaje de un 
+JOptionPane en nuestra pantalla aunque este ejemplo sea un poco burdo pues lo que necesitamos es
+que nuestro constructor de nuestra clase Thread lleve como parametros un texto que es el que queremos
+hacer coincidor con el texto de nuestra otra clase  y en principio ya estaria 
+
+
+
+
+class MyThread extends Thread{
+String mensaje;
+
+   public MyThread(String mensaje){
+this.mensaje=mensaje;
+            
+   }
+public void run(){
+mensaje = "Hello World";    
+JOptionPane.showInputDialog(mensaje);
+}
+
+}
+
+
+3)   Luego en nuestra clase original donde queremos que se ejecuto nuestro codigo ya se en un metodo 
+en una clase en vez de poner todo el codigo hacemos coinsidir nuestro mensaje con el string de la clase
+luego creamos una instancia de la clase Thread y le pasamos como paramtros lo que queremos hacer coincidir
+
+
+4)   Por último iniciamos nuestra clase 
+
+
+class mensaje{
+String mensaje;
+  public mensaje(){
+       
+    
+   }
+public void mensaje(){
+  MyThread myThread = new MyThread(mensaje);
+  myThread.start;
+
+}
+
+
+}
+
+        *******Finished
+
+  
